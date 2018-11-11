@@ -1,12 +1,12 @@
 @font-face {
     font-family: "WDRSlab";
     font-weight: 400;
-    src: url("../fonts/wdrslab-regularvz-v101-web.eot?#iefix") format("embedded-opentype"), url("../fonts/wdrslab-regularvz-v101-web.woff") format("woff"), url("../fonts/wdrslab-regularvz-v101-web.ttf") format("truetype"), url("../fonts/wdrslab-regularvz-v101-web.svg") format("svg");
+    src: /* url("../fonts/wdrslab-regularvz-v101-web.eot?#iefix") format("embedded-opentype"), */ url("../fonts/wdrslab-regularvz-v101-web.woff") format("woff"), url("../fonts/wdrslab-regularvz-v101-web.ttf") format("truetype"), url("../fonts/wdrslab-regularvz-v101-web.svg") format("svg");
 }
 @font-face {
     font-family: "WDRSlab";
     font-weight: 800;
-    src: url("../fonts/wdrslab-boldvz-v101-web.eot?#iefix") format("embedded-opentype"), url("../fonts/wdrslab-boldvz-v101-web.woff") format("woff"), url("../fonts/wdrslab-boldvz-v101-web.ttf") format("truetype"), url("../fonts/wdrslab-boldvz-v101-web.svg") format("svg");
+    src: /* url("../fonts/wdrslab-boldvz-v101-web.eot?#iefix") format("embedded-opentype"), */ url("../fonts/wdrslab-boldvz-v101-web.woff") format("woff"), url("../fonts/wdrslab-boldvz-v101-web.ttf") format("truetype"), url("../fonts/wdrslab-boldvz-v101-web.svg") format("svg");
 }
 @font-face {
     font-family: "Thesis";
