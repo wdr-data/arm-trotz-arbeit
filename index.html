@@ -70,49 +70,24 @@
     <hr>
 
     <div class="credits">
-        <h3>Credits:</h3>
 
-        <p>Von Patricia Ennenbach und Peter Schneider</p>
-        <p>Umsetzung: Marcus Weiner, Patricia Ennenbach</p>
-        <p>Redaktion: Rainer Kellers</p>
-        <p>Design: Mirko Schweikert</p>
+        <h3>Team</h3>
+        <p>Ein Film von Susanne Jäger</p>
+        <p>Daten-Recherche und Online-Text Patricia Ennenbach</p>
+        <p>Entwicklung: Christine Gotthardt, Patricia Ennenbach</p>
+        <p>Design: Christine Gotthardt</p>
+        <p>Redaktion: Angela Jaenke</p>
 
-        <h3>Quellen:</h3>
-
-        <h4>Arbeitslosenquote:</h4>
-        <a href="https://www.landesdatenbank.nrw.de/">Landesdatenbank-NRW: Arbeitsmarktstatistik der Bundesagentur für Arbeit, Deep-Link nicht möglich.</a>
-
-        <h4>Jugendarmut:</h4>
-        <a href="http://www.sozialberichte.nrw.de/sozialindikatoren_nrw/indikatoren/7_einkommensarmut/indikator7_7/Indikator_7_7_NRW_2011-2015.xlsx">Sozialberichte NRW, SGB-II-Quote der unter 15-Jährigen 2011-2015, xlsx</a></p>
-        <a href="http://www.sozialberichte.nrw.de/sozialindikatoren_nrw/indikatoren/7_einkommensarmut/indikator7_7/Indikator_7_7_NRW_2007-2010.xlsx">Sozialberichte NRW, SGB-II-Quote der unter 15-Jährigen 2007-2010, xlsx</a>
-
-        <h4>U3-Betreuung:</h4>
-        <p>Ergebnisse der Kinder- und Jugendhilfestatistik Nordrhein-Westfalen, auf Anfrage.</p>
-
-        <h4>Kriminalität:</h4>
-        <a href="https://www.polizei.nrw.de/media/Dokumente/PKS/2016/Zeitreihen_PKS_NRW_2016.pdf">Polizeiliche Kriminalstatistik 2016, pdf</a>
-
-        <h4>Neuverschuldung:</h4>
-        <p>Wirtschaftsministerium, auf Anfrage.</p>
-        <a href="http://www.haushalt.fm.nrw.de/daten/html/hhr.html">NRW-Haushaltsdaten</a>
-
-        <h4>Schüler-Lehrer-Verhältnis:</h4>
-        <a href="https://www.schulministerium.nrw.de/docs/bp/Ministerium/Service/Schulstatistik/Amtliche-Schuldaten/index.html">Amtliche Schuldaten</a>
-
-        <h4>Wirtschaftswachstum:</h4>
-        <a href="https://www.destatis.de/DE/Publikationen/Thematisch/VolkswirtschaftlicheGesamtrechnungen/VGRderLaender/VGR_LaenderergebnisseBand1_5820001167005.xlsx?__blob=publicationFile">Destatis, Volkswirtschaftliche Gesamtrechnungen der Länder, xls</a>
-
-        <h3>Credits:</h3>
-
+        <h3>Credits</h3>
         <p>"Was schätzen sie" beruht auf einer Vorlage der New York Times:</p>
         <a href="https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html?_r=0">
             You Draw It: What Got Better or Worse During Obama’s Presidency
         </a>
 
-        <p>Ein Dank an Adam Pearce, Graphics Editor bei der New York Times, der den Code zugänglich gemacht hat und uns das Recht eingeräumt hat, ihn zu nutzen:</p>
-        <a href="https://bl.ocks.org/1wheel/07d9040c3422dac16bd5be741433ff1e">You Draw It - D3 drag bei bl.ocks.org</a>
+        <p>Ein Dank an Mihael Ankers, der unseren <a href "https://github.com/wdr-data/you-draw-it">Was schätzen Sie</a> Code verbessert und das Recht eingeräumt hat, ihn zu nutzen:</p>
+        <a href="https://github.com/EE2dev/you-draw-it">Was schätzen Sie - mit Balkendiagrammen</a>
 
-        <p>Ebenso ein Dank an Mike Bostock:</p>
+        <p>Die Grafiken beruhen auf D3 von Mike Bostock:</p>
         <a href="https://d3js.org/">D3.js - Data Driven Documents</a>
     </div>
 
@@ -120,6 +95,7 @@
         {% set now = Date() %}
         Stand: {{ now|date('d.m.Y') }}
     </div>
+
 </article>
 
 {% include "partials/breadcrumb.html" %}
