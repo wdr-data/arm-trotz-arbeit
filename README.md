@@ -1,26 +1,27 @@
-# Was schätzen Sie: Wie hat sich NRW unter Hannelore Kraft verändert?
+# Arm trotz Arbeit
+## Was schätzen Sie: Wie viel verdienen Frauen in Deutschland?
 
-## Über das Projekt:
-Am 14. Mai wird in Nordrhein-Westfalen gewählt. Wie hat sich das Bundesland in den fünf Regierungsjahren von Ministerpräsidentin Hannelore Kraft (SPD) verändert?
+Susanne reinigt Krankenhausbetten. Ulrike ist studierte Opernsängerin und hat neun Jobs. Janina arbeitet daran, mit zwei Kleinkindern wieder eine Stelle zu finden. Sandra hat vier Kinder und einen Job, für den sie überqualifiziert ist.
 
-Die Nutzer werden gebeten, die Linie zu Ende zu zeichnen. Ein Klick auf den Button unter der Grafik verrät, ob der Nutzer richtig lag.
+‘Menschen hautnah’ hat vier Frauen begleitet, die wissen, was hart arbeiten bedeutet. Und dabei nur wenig verdienen. Das hat in Deutschland System.
 
-Verlinkt sind alle zu Grunde liegenden Daten auch als barrierefreie Tabelle erreichbar.
+Wir laden Sie ein rund um das Thema ‘Frauen und Arbeit’ zu schätzen, wie die Situation in Deutschland ist. Am Ende gibt es eine Auswertung, wie gut Sie geschätzt haben.
+
+## Team
+    Ein Film von Susanne Jäger
+    Daten-Recherche und Online-Text Patricia Ennenbach
+    Entwicklung: Christine Gotthardt, Patricia Ennenbach
+    Design: Christine Gotthardt
+    Redaktion: Angela Jaenke
 
 ## Credits
+    "Was schätzen sie" beruht auf einer Vorlage der New York Times: [https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html?_r=0"](You Draw It: What Got Better or Worse During Obama’s Presidency)
 
-Von Patricia Ennenbach und Peter Schneider
-Umsetzung: Marcus Weiner, Patricia Ennenbach
-Redaktion: Rainer Kellers
-Design: Mirko Schweikert
+    Ein Dank an Mihael Ankers, der unseren [https://github.com/wdr-data/you-draw-it](Was schätzen Sie)- Code verbessert und das Recht eingeräumt hat, ihn zu nutzen: [https://github.com/EE2dev/you-draw-it](Was schätzen Sie - mit Balkendiagrammen)
 
-"Was schätzen sie" beruht auf einer Vorlage der New York Times: [You Draw It: What Got Better or Worse During Obama’s Presidency](https://www.nytimes.com/interactive/2017/01/15/us/politics/you-draw-obama-legacy.html?_r=0)
-Ein Dank an Adam Pearce, Graphics Editor bei der New York Times, der den Code zugänglich gemacht hat und uns das Recht eingeräumt hat, ihn zu nutzen:
-[You Draw It - D3 drag bei bl.ocks.org](https://bl.ocks.org/1wheel/07d9040c3422dac16bd5be741433ff1e)
-Ebenso ein Dank an Mike Bostock:
-[D3.js - Data Driven Documents](https://d3js.org/)
+    Die Grafiken beruhen auf D3 von Mike Bostock: [https://d3js.org/"](D3.js - Data Driven Documents)
 
-[Impressum](http://www1.wdr.de/impressum/index.html)
+    [Impressum](http://www1.wdr.de/impressum/index.html)
 
 ## Rechtliches & Lizenzen
 
