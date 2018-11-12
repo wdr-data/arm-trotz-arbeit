@@ -1,0 +1,25 @@
+<div class="questions">
+  <div class="question">
+      <h2>{{ question.heading|mdi }}</h2>
+      <h3>{{ question.subheading|mdi }}</h3>
+      <div class="you-draw-it {{ question.key }}" data-key="{{ question.key }}"></div>
+      <div class="accessibility">
+          <a href="{{ question.accessibility }}" title="Sehen Sie sich die Daten der Grafik als Tabelle an">
+              Barrierefreie Tabelle
+          </a>
+      </div>
+      <div class="result {{ question.key }}">
+          <div class="actionContainer">
+              <button class="showAction" disabled>Wie war's tatsächlich?</button>
+              <div class="tooltipcontainer">
+                  <span class="tooltiptext">Zeichnen Sie Ihre Einschätzung. Der Klick verrät, ob sie stimmt.</span>
+              </div>
+          </div>
+          <div class="text">{{ question.result|md }}</div>
+      </div>
+      <script>
+          window.ydi_data = window.ydi_data || {};
+          window.ydi_data['{{ question.key }}'] = {% autoescape false %}{{ question|json_encode }}{% endautoescape %};
+      </script>
+  </div>
+</div>

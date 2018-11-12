@@ -39,11 +39,11 @@
         <p><b><a href="https://www1.wdr.de/fernsehen/menschen-hautnah/sendungen/arm-trotz-arbeit-110.html">Den ganzen Film in der Mediathek ansehen</a></b></p>
     </div>
 
-    <div class="chapter">
+    <div class="chapter_one">
         <h2>EINKOMMEN</h2>
         <p>In keinem anderen Land der OECD (Organisation für wirtschaftliche Zusammenarbeit und Entwicklung mit 36 Mitgliedsländern) tragen Frauen in einer Partnerschaft so wenig zum Haushaltseinkommen bei. Der durchschnittliche Anteil am Familieneinkommen beträgt in Deutschland 22,4&nbsp;%, in Dänemark sind es beispielsweise 42&nbsp;%. <a href= "https://read.oecd-ilibrary.org/social-issues-migration-health/dare-to-share-germany-s-experience-promoting-equal-partnership-in-families_9789264259157-en#page23"> OECD-Schnitt sind 33&nbsp;%.</a>.</p>
         <br>
-        <!--01_Einkommen YDI here-->
+        {% include "partials/question.html" with { question: data[2] } %}
         <br>
         <p>Deutschland hat OECD-weit als einziges Land ein Steuer- und Sozialsystem, das bei Familien mit schulpflichtigen Kindern <a href="https://www.bmfsfj.de/blob/83858/928434dae7d841aadc5d2b0ef137573b/20160307-studie-mitten-im-leben-data.pdf"> Kinderbetreuung, Hausarbeit oder der Pflege von Angehörigen </a>. Die Einführung des umstrittenen Betreuungsgelds für Kinder bis 36 Monate kann verstärkend wirken.<br>Im Ergebnis ist der Anteil der Frauen im reichen Land Deutschland bei den schlecht bezahlten Jobs hoch und <a href="https://ourworldindata.org/six-facts-pay-gap"> bei den gut bezahlten niedrig</a>. Zwei Drittel aller ausschließlichen Minijobber in Deutschland sind Frauen. Darüber hinaus haben mehr Frauen als Männer <a href="https://statistik.arbeitsagentur.de/Statischer-Content/Arbeitsmarktberichte/Personengruppen/generische-Publikationen/Frauen-Maenner-Arbeitsmarkt.pdf"> neben ihrem Hauptjob noch einen Minijob</a>.</p>
         <br>
@@ -51,33 +51,8 @@
         <br>
         <p>Das finanzielle Risiko tragen meist die Frauen: Knapp 15 % der Frauen im Alter zwischen 30 und 50 sind geschieden oder leben getrennt. 22 % der geschiedenen Frauen haben ein eigenes Nettoeinkommen unter 1.000 Euro; 59 % unter 1.500 Euro. Vor allem Frauen, die während der Ehe nicht oder nur geringfügig erwerbstätig waren, haben nach der Scheidung (ohne neuen Partner) große Probleme ihren Lebensstandard zu halten oder ihre eigene Existenz zu finanzieren. Sie stehen vor der Entscheidung: Lebensstandard reduzieren oder einen neuen Hauptverdiener suchen. 21 % der geschiedenen Frauen schaffen es, durch ihre Arbeit mehr als 2.000 Euro netto zu verdienen. Voraussetzung dafür in den meisten Fällen: Arbeit schon während der Ehe.</p>
     </div>
-
-    <div class="questions">
-        {% for question in data %}
-        <div class="question">
-            <h2>{{ question.heading|mdi }}</h2>
-            <h3>{{ question.subheading|mdi }}</h3>
-            <div class="you-draw-it {{ question.key }}" data-key="{{ question.key }}"></div>
-            <div class="accessibility">
-                <a href="{{ question.accessibility }}" title="Sehen Sie sich die Daten der Grafik als Tabelle an">
-                    Barrierefreie Tabelle
-                </a>
-            </div>
-            <div class="result {{ question.key }}">
-                <div class="actionContainer">
-                    <button class="showAction" disabled>Wie war's tatsächlich?</button>
-                    <div class="tooltipcontainer">
-                        <span class="tooltiptext">Zeichnen Sie Ihre Einschätzung. Der Klick verrät, ob sie stimmt.</span>
-                    </div>
-                </div>
-                <div class="text">{{ question.result|md }}</div>
-            </div>
-            <script>
-                window.ydi_data = window.ydi_data || {};
-                window.ydi_data['{{ question.key }}'] = {% autoescape false %}{{ question|json_encode }}{% endautoescape %};
-            </script>
-        </div>
-        {% endfor %}
+    <div class="chapter_two">
+        {% include "partials/question.html" with { question: data[3] } %}
     </div>
 
     <hr>
