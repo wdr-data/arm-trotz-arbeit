@@ -1,3 +1,11 @@
 heading: 'Was schätzen Sie: Männer im Rentenalter bekamen 2016 in Westdeutschland im Schnitt 1078 Euro Rente. Wie hoch war die Rente bei den Frauen?' 
 result: >
         **Kürzere Beitragskarrieren, weniger Arbeitsstunden und niedrigere Einkommen führen auch zu relativ niedrigen Renten. Frauen erhalten im Schnitt nur etwa die Hälfte der durchschnittlichen Rente, die Männern ausbezahlt wird.**
+data:
+  Männer: 1078
+  Frauen: 660
+
+accessibility: "Frauen in Westdeutschland bekamen 2016 im Schnitt 660 Euro Rente. Männer kamen im Schnitt auf 1.078 Euro"
+unit: '€'
+precision: 0
+source: "http://dip21.bundestag.de/dip21/btd/18/131/1813119.pdf"

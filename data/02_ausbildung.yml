@@ -1,3 +1,11 @@
 heading: 'Was schätzen Sie: Wie viele Frauen zwischen 30 und 50 Jahren haben Abitur?' 
 result: >
         **In der Generation der 30- bis 50-Jährigen sind Frauen nicht schlechter ausgebildet als Männer. Deutsche Frauen haben ebenso häufig einen Uni-Abschluss wie deutsche Männer und stellen die Hälfte des Arbeitskräftepotenzials.**
+data:
+  Männer: 35
+  Frauen: 36
+
+accessibility: "In der Gruppe der 30- bis 50-jährigen haben mehr Frauen als Männer Abitur. 35 Prozent sind es bei den Männern und 36 Prozent bei den Frauen."
+unit: '%'
+precision: 0
+source: "https://www.bmfsfj.de/blob/83858/928434dae7d841aadc5d2b0ef137573b/20160307-studie-mitten-im-leben-data.pdf"
