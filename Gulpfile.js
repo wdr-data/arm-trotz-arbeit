@@ -134,6 +134,18 @@ gulp.task('images', function() {
         .pipe(gulp.dest(path.join(dist, 'images')));
 });
 
+gulp.task('videos', function() {
+    return gulp.src('videos/**/*')
+        .pipe($.imagemin([
+            imageminJpegoptim({ max: 70 }),
+            $.imagemin.optipng({optimizationLevel: 5}),
+            $.imagemin.svgo({plugins: [{removeViewBox: true}]})
+        ], {
+            verbose: true
+        }))
+        .pipe(gulp.dest(path.join(dist, 'videos')));
+});
+
 gulp.task('copy:dist', function() {
     return gulp.src([
         'bower_components/jquery/dist/jquery.min.js',
@@ -142,7 +154,7 @@ gulp.task('copy:dist', function() {
         .pipe(gulp.dest(dist));
 });
 
-gulp.task('assets', ['images', 'fonts', 'html', 'copy:dist']);
+gulp.task('assets', ['images', 'videos', 'fonts', 'html', 'copy:dist']);
 
 gulp.task('critical-css', ['assets'], function() {
     return gulp.src(path.join(dist, 'index.html'))
