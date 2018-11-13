@@ -21,15 +21,23 @@ body
   &.container
     margin: 0 auto
     background: white
-  
-  .textWrapper 
+    margin-top: 10px
+
+  @media (max-width: 750px)
+    .container
+      padding: 10px
+      margin-top: 0
+
+  .textWrapper
     background-color: #fab031
     padding: 20px 50px
     margin: 20px 0 50px 0
-  
+
   @media (max-width: 750px)
     .textWrapper
       padding: 10px
+      margin: 20px 0
+
 
   .contentWrapper
     background-color: white
@@ -44,10 +52,12 @@ body
 
   video
     height: 400px
+    margin: 20px 0
 
   @media (max-width: 750px)
     video
       height: 300px
+      margin: 10px 0
 
 .category
   overflow: hidden
@@ -68,7 +78,7 @@ body
 
 .header
   display: flex
-  flex-direction: column
+  flex-direction: row
   align-items: center
   background-image: url('../images/header.png')
   background-position: center
@@ -88,7 +98,7 @@ body
   @media (max-width: 750px)
     h1
       font-size: 35px
-      align-self: center
+      align-self: flex-end
       padding: 20px
 
 .intro
@@ -134,6 +144,8 @@ body
 
   p
     padding: 0 50px
+    size: 14px
+    line-height: 1.6
 
 @media (max-width: 750px)
   .chapter_one,
@@ -142,6 +154,7 @@ body
   .chapter_four
     p
       padding: 0 10px
+      size: 10px
 
 .question
   h2, h3
@@ -258,6 +271,10 @@ body
 .credits
   padding: 0 50px
 
+@media (max-width: 750px)
+  .credits
+    padding: 0 10px
+
   h3, h4
     margin: 30px 0 10px 0
 
@@ -273,11 +290,6 @@ body
 .updatedAt
   margin-top: 20px
   text-align: right
-
-@media (max-width: $bp-md)
-  .container
-    padding-left: 10px
-    padding-right: 10px
 
 @media (max-width: $bp-sm)
   .you-draw-it
