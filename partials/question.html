@@ -6,11 +6,9 @@
             </div>
         </div>
         <h3>{{ question.subheading|mdi }}</h3>
-        <div class="you-draw-it {{ question.key }}" data-key="{{ question.key }}"></div>
-        <div class="accessibility">
-            <a href="{{ question.accessibility }}" title="Sehen Sie sich die Daten der Grafik als Tabelle an">
-                Barrierefreie Tabelle
-            </a>
+        <div class="you-draw-it {{ question.key }}" data-key="{{ question.key }}" aria-labelledby="hint-{{ question.key }}"></div>
+        <div id="hint-{{ question.key }}" class="accessibility" hidden aria-hidden="false">
+            {{ question.accessibility | safe }}
         </div>
         <div class="result {{ question.key }}">
             <div class="actionContainer">
