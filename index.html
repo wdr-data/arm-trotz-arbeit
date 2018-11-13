@@ -29,21 +29,38 @@
 {% include "partials/header.html" with { active: 'fernsehen' } %}
 
 <article id="content" class="container">
-    <div class="intro">
+    <div class="header">
         <h1>Arm trotz Arbeit</h1>
+    </div>
+    <div class="intro">
         <h2>Was schätzen Sie: Wie viel verdienen Frauen in Deutschland?</h2>
-        <video height=400px controls>
-            <source src="videos/Intro.mp4" type="video/mp4">
-        </video>
-        <p>
-           ‘Menschen hautnah’ hat vier Frauen begleitet, die wissen, was hart arbeiten bedeutet. Und dabei nur wenig verdienen. Das hat in Deutschland System.<br> 
-            Wir laden Sie ein rund um das Thema ‘Frauen und Arbeit’ zu schätzen, wie die Situation in Deutschland ist. Am Ende gibt es eine Auswertung, wie gut Sie geschätzt haben.</p>
-        <p><b><a href="https://www1.wdr.de/fernsehen/menschen-hautnah/sendungen/arm-trotz-arbeit-110.html">Den ganzen Film in der Mediathek ansehen</a></b></p>
+        <div class="imageWrapper">
+            <img src="./images/face_one.png">
+            <img src="./images/face_two.png">
+            <img src="images/face_three.png">
+        </div>
+        <div class="textWrapper">
+            <div class="contentWrapper">
+                <p>
+                    ‘Menschen hautnah’ hat vier Frauen begleitet, die wissen, was hart arbeiten bedeutet. Und dabei nur wenig verdienen. Das hat in Deutschland System.<br> 
+                    Wir laden Sie ein rund um das Thema ‘Frauen und Arbeit’ zu schätzen, wie die Situation in Deutschland ist. Am Ende gibt es eine Auswertung, wie gut Sie geschätzt haben.
+                    <a href="https://www1.wdr.de/fernsehen/menschen-hautnah/sendungen/arm-trotz-arbeit-110.html">Den ganzen Film in der Mediathek ansehen</a></b></p>
+            </div>
+        </div>
+        <div class="video-wrapper">
+            <video controls>
+                <source src="videos/Intro.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
 
     <div class="chapter_one">
-        <h2>EINKOMMEN</h2>
-        <p>In keinem anderen Land tragen Frauen in einer Partnerschaft so wenig zum Haushaltseinkommen bei, stellt die OECD fest. Der durchschnittliche Anteil am Familieneinkommen beträgt in Deutschland 22,4 Prozent, in Dänemark sind es beispielsweise 42 Prozent. <a href= "https://read.oecd-ilibrary.org/social-issues-migration-health/dare-to-share-germany-s-experience-promoting-equal-partnership-in-families_9789264259157-en#page23"> OECD-Schnitt sind 33 Prozent.</a></p>
+        <div class="textWrapper">
+            <div class="contentWrapper">
+                <h2>EINKOMMEN</h2>
+                <p>In keinem anderen Land tragen Frauen in einer Partnerschaft so wenig zum Haushaltseinkommen bei, stellt die OECD fest. Der durchschnittliche Anteil am Familieneinkommen beträgt in Deutschland 22,4 Prozent, in Dänemark sind es beispielsweise 42 Prozent. <a href= "https://read.oecd-ilibrary.org/social-issues-migration-health/dare-to-share-germany-s-experience-promoting-equal-partnership-in-families_9789264259157-en#page23"> OECD-Schnitt sind 33 Prozent.</a></p>
+            </div>
+        </div>
         <br>
         {% include "partials/question.html" with { question: data[0] } %}
         <br>
@@ -54,7 +71,7 @@
         <br>
         <p>Im reichen Land Deutschland ist der Anteil der Frauen bei schlecht bezahlten Jobs hoch und <a href="https://ourworldindata.org/six-facts-pay-gap"> bei gut bezahlten niedrig.</a> Zwei Drittel aller ausschließlichen Minijobber in Deutschland sind Frauen. Darüber hinaus haben mehr Frauen als Männer <a href="https://statistik.arbeitsagentur.de/Statischer-Content/Arbeitsmarktberichte/Personengruppen/generische-Publikationen/Frauen-Maenner-Arbeitsmarkt.pdf"> neben ihrem Hauptjob noch einen Minijob.</a></p>
         <div class="video-wrapper">
-            <video height=400px controls>
+            <video controls>
                 <source src="./videos/Ulrike_Einkommen.mp4" type="video/mp4">
             </video>
         </div>
@@ -62,36 +79,48 @@
     </div>
 
     <div class="chapter_two">
-        <h2>AUSBILDUNG</h2>
-        <p>Woran liegt es, dass viele Frauen in Deutschland so wenig verdienen? 2017 arbeiteten in Deutschland 83 Prozent der Männer und knapp <a href="https://ec.europa.eu/eurostat/tgm/refreshTableAction.do?tab=table&plugin=1&pcode=t2020_10&language=de">75 Prozent der Frauen im Alter von 20-64 Jahren.</a> Damit liegt die Quote der arbeitenden Frauen gut <a href="https://www.oecd.org/germany/Gender2017-DEU-de.pdf"> 10 Prozentpunkte über dem Durchschnitt in der OECD.</a> Im Bereich Ausbildung haben sich in Deutschland die Unterschiede zwischen Frauen und Männern in den vergangen Jahrzehnten stark verringert:</p>
+        <div class="textWrapper">
+            <div class="contentWrapper">
+                <h2>AUSBILDUNG</h2>
+                <p>Woran liegt es, dass viele Frauen in Deutschland so wenig verdienen? 2017 arbeiteten in Deutschland 83 Prozent der Männer und knapp <a href="https://ec.europa.eu/eurostat/tgm/refreshTableAction.do?tab=table&plugin=1&pcode=t2020_10&language=de">75 Prozent der Frauen im Alter von 20-64 Jahren.</a> Damit liegt die Quote der arbeitenden Frauen gut <a href="https://www.oecd.org/germany/Gender2017-DEU-de.pdf"> 10 Prozentpunkte über dem Durchschnitt in der OECD.</a> Im Bereich Ausbildung haben sich in Deutschland die Unterschiede zwischen Frauen und Männern in den vergangen Jahrzehnten stark verringert:</p>
+            </div>
+        </div>
         <br>
         {% include "partials/question.html" with { question: data[1] } %}
         <br>
         <p>Unverändert groß sind jedoch die Unterschiede in der Studienfachwahl zwischen Frauen und Männern: 2009 entfielen zum Beispiel in Deutschland auf Frauen nur 16 Prozent der Uni-Abschlüsse in Informatik, dafür aber 70 Prozent im Gesundheits- und Sozialwesen. Die OECD hält dazu fest: “Diese Studienentscheidungen sind das Resultat unterschiedlicher Vorlieben und nicht geschlechtsspezifischer Begabungen.” Und sie bescheinigt Deutschland, dass “Bildung und Kompetenzen von Frauen auf dem deutschen Arbeitsmarkt <a href="https://www.oecd.org/germany/Gender2017-DEU-de.pdf">nicht voll ausgeschöpft werden.”</a></p>
         <div class="video-wrapper">
-            <video height=400px controls>
+            <video controls>
                 <source src="./videos/Sandra_Ausbildung.mp4" type="video/mp4">
             </video>
         </div>
     </div>
 
     <div class="chapter_three">
-        <h2>TEILZEIT</h2>
-        <p>2016 hatten 46 Prozent der Frauen einen Teilzeitjob und 11 Prozent der Männer. Auch wenn sich der Anteil der arbeitenden Frauen in den vergangenen zehn Jahren erhöht hat, beruht der Anstieg fast allein auf mehr mehr Teilzeitbeschäftigung. Die Zahl der vollzeitbeschäftigten Frauen hat sich <a href="https://statistik.arbeitsagentur.de/Statischer-Content/Arbeitsmarktberichte/Personengruppen/generische-Publikationen/Frauen-Maenner-Arbeitsmarkt.pdf"> im Grunde nicht verändert.</a> Und die Lücke zwischen den Teilzeitquoten beider Geschlechter hat sich deutlich vergrößert. Dabei wünschte sich 2015 in einer Umfrage des Familienministeriums jeder Dritte Vater mehr Zeit mit den Kindern und die meisten <a href="https://read.oecd-ilibrary.org/social-issues-migration-health/dare-to-share-germany-s-experience-promoting-equal-partnership-in-families_9789264259157-en#page22"> Väter würden gerne weniger arbeiten.</a> Trotzdem sieht es derzeit nicht so aus, als würde sich an der Verteilung der Erwerbsarbeit viel ändern:</p>
+        <div class="textWrapper">
+            <div class="contentWrapper">
+                <h2>TEILZEIT</h2>
+                <p>2016 hatten 46 Prozent der Frauen einen Teilzeitjob und 11 Prozent der Männer. Auch wenn sich der Anteil der arbeitenden Frauen in den vergangenen zehn Jahren erhöht hat, beruht der Anstieg fast allein auf mehr mehr Teilzeitbeschäftigung. Die Zahl der vollzeitbeschäftigten Frauen hat sich <a href="https://statistik.arbeitsagentur.de/Statischer-Content/Arbeitsmarktberichte/Personengruppen/generische-Publikationen/Frauen-Maenner-Arbeitsmarkt.pdf"> im Grunde nicht verändert.</a> Und die Lücke zwischen den Teilzeitquoten beider Geschlechter hat sich deutlich vergrößert. Dabei wünschte sich 2015 in einer Umfrage des Familienministeriums jeder Dritte Vater mehr Zeit mit den Kindern und die meisten <a href="https://read.oecd-ilibrary.org/social-issues-migration-health/dare-to-share-germany-s-experience-promoting-equal-partnership-in-families_9789264259157-en#page22"> Väter würden gerne weniger arbeiten.</a> Trotzdem sieht es derzeit nicht so aus, als würde sich an der Verteilung der Erwerbsarbeit viel ändern:</p>
+            </div>
+        </div>
         <br>
         {% include "partials/question.html" with { question: data[2] } %}
         <br>
         <p>Eine bessere Aufteilung der Kinderbetreuung ist ein wichtiger Faktor, wenn es darum geht, Frauen zu ermöglichen, voll in den Arbeitsmarkt einzusteigen. Seit der Einführung des Elterngeldes nehmen Jahr für Jahr mehr Väter eine Auszeit für ihre Kinder. Bei Kindern, die 2015 geboren wurden, blieb jeder dritte Vater mindestens 2 Monate zu Hause. Insgesamt fehlt in Deutschland laut OECD vielerorts ein qualitativ hochwertiges und bezahlbares <a href="http://www.oecd.org/gender/ClosingTheGenderGap-Germany.pdf">Betreuungsangebot.</a></p>
         <div class="video-wrapper">
-            <video height=400px controls>
+            <video controls>
                 <source src="./videos/Janina_Teilzeit.mp4" type="video/mp4">
             </video>
         </div>
     </div>
 
     <div class="chapter_four">
-        <h2>ALTERSARMUT</h2>
-        <p>Bei Frauen zwischen 60 und 64 Jahren hat sich die Erwerbstätigenquote in den vergangenen Jahren verdoppelt: von 24,9 Prozent im Jahr 2007 auf <a href="https://www.destatis.de/Europa/DE/Thema/BevoelkerungSoziales/Arbeitsmarkt/ArbeitsmarktFrauen.html">53,3 Prozent im Jahr 2017.</a> Betrachtet man wie sich der Verdienst von Männern und Frauen im Verlauf des Lebens entwickelt wird deutlich: Bis 30 steigt der Verdienst bei beiden ähnlich an. Ab 30, also ungefähr dem Durchschnittsalter von Müttern bei der Geburt des ersten Kindes, unterscheiden sich die Verdienste zunehmend.</p>
+        <div class="textWrapper">
+            <div class="contentWrapper">
+                <h2>ALTERSARMUT</h2>
+                <p>Bei Frauen zwischen 60 und 64 Jahren hat sich die Erwerbstätigenquote in den vergangenen Jahren verdoppelt: von 24,9 Prozent im Jahr 2007 auf <a href="https://www.destatis.de/Europa/DE/Thema/BevoelkerungSoziales/Arbeitsmarkt/ArbeitsmarktFrauen.html">53,3 Prozent im Jahr 2017.</a> Betrachtet man wie sich der Verdienst von Männern und Frauen im Verlauf des Lebens entwickelt wird deutlich: Bis 30 steigt der Verdienst bei beiden ähnlich an. Ab 30, also ungefähr dem Durchschnittsalter von Müttern bei der Geburt des ersten Kindes, unterscheiden sich die Verdienste zunehmend.</p>
+            </div>
+        </div>
         <br>
         <img src="images/verdienst_alter.svg" alt="Während der Bruttostundenverdienst bei Männern ab 30 Jahren bis zum 45. Lebensjahr fast kontinuierlich ansteigt, bleibt er bei Frauen ab 30 fast gleich." width=50%>
         <p>Quelle: <a href="https://www.destatis.de/DE/Publikationen/Thematisch/VerdiensteArbeitskosten/Arbeitnehmerverdienste/BroschuereVerdiensteBlick0160013179004.pdf?__blob=publicationFile"> Statistisches Bundesamt, Wiesbaden 2018</a></p>
@@ -103,7 +132,7 @@
         <br>
         <p>Kürzere Beitragskarrieren, weniger Arbeitsstunden und niedrigere Einkommen führen zu relativ niedrigen Renten. Frauen erhalten im Schnitt nur etwa die Hälfte der durchschnittlichen Rente, die Männern ausbezahlt wird. Dieses geschlechtsbedingte Rentengefälle ist das Größte in der OECD: “Zwei Drittel der deutschen Rentner sind Frauen, und die Rentenlücke zwischen Männern und Frauen ist ein wesentlicher Grund dafür, dass 10 Prozent von ihnen <a href="http://www.oecd.org/gender/ClosingTheGenderGap-Germany.pdf">in Altersarmut leben.”</a></p>
         <div class="video-wrapper">
-            <video height=400px controls>
+            <video controls>
                 <source src="./videos/Susanne_Altersarmut.mp4" type="video/mp4">
             </video>
         </div>
