@@ -40,10 +40,12 @@
             <img src="./images/face_two.png" alt="Profilbild Janina">
             <img src="images/face_three.png" alt="Profilbild Ulrike">
         </div>
-                <p>
-                    <b>‘Menschen hautnah’ hat vier Frauen begleitet, die wissen, was hart arbeiten bedeutet und dabei nur wenig verdienen. Das kommt in Deutschland ziemlich oft vor.<br>
-                    Wir laden Sie ein, mal zu schätzen, wie die Situation für Frauen in Deutschland ist.<br>
-                    <br><a href="https://www1.wdr.de/fernsehen/menschen-hautnah/sendungen/arm-trotz-arbeit-110.html">Den ganzen Film 'Menschen hautnah - Arm trotz Arbeit' in der Mediathek ansehen</a></b></p>
+        <p class="teaser">
+            <strong>‘Menschen hautnah’ hat vier Frauen begleitet, die wissen, was hart arbeiten bedeutet und dabei nur wenig verdienen. Das kommt in Deutschland ziemlich oft vor.
+                <br>Wir laden Sie ein, mal zu schätzen, wie die Situation für Frauen in Deutschland ist.
+            </strong>
+            <br><a href="https://www1.wdr.de/fernsehen/menschen-hautnah/sendungen/arm-trotz-arbeit-110.html">Den ganzen Film 'Menschen hautnah - Arm trotz Arbeit' in der Mediathek ansehen</a>
+        </p>
         <div class="video-wrapper">
             <video controls>
                 <source src="videos/Intro.mp4" type="video/mp4">
@@ -57,7 +59,9 @@
         {% include "partials/question.html" with { question: data[0] } %}
         <p>Deutschland hat OECD-weit als einziges Land ein Steuer- und Sozialsystem, das bei Familien mit schulpflichtigen Kindern Einverdienerhaushalte klar bevorzugt. So führt zum Beispiel das Ehegattensplitting dazu, dass verheiratete Frauen ihren Anteil am Familieneinkommen unterschätzen und Männer ihren überschätzen. Auf dieser Basis entscheiden Ehepartner über die Verteilung von <a href="https://www.bmfsfj.de/blob/83858/928434dae7d841aadc5d2b0ef137573b/20160307-studie-mitten-im-leben-data.pdf"> Kinderbetreuung, Hausarbeit oder die Pflege von Angehörigen.</a></p>
         <iframe style="margin: 0 4%;" src="https://datawrapper.dwcdn.net/qIXZw/11/" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="90%" height="516"></iframe>
-        <p><b><a href="https://www1.wdr.de/verbraucher/geld/bf-einkommen-100.html">Barrierefreie Tabelle</a></b></p>
+        <p class="bf-link">
+            <a href="https://www1.wdr.de/verbraucher/geld/bf-einkommen-100.html">Barrierefreie Tabelle</a>
+        </p>
         <p>Im reichen Land Deutschland ist der Anteil der Frauen bei schlecht bezahlten Jobs hoch und <a href="https://ourworldindata.org/six-facts-pay-gap"> bei gut bezahlten niedrig.</a> Zwei Drittel aller ausschließlichen Minijobber in Deutschland sind Frauen. Darüber hinaus haben mehr Frauen als Männer <a href="https://statistik.arbeitsagentur.de/Statischer-Content/Arbeitsmarktberichte/Personengruppen/generische-Publikationen/Frauen-Maenner-Arbeitsmarkt.pdf"> neben ihrem Hauptjob noch einen Minijob.</a></p>
         <div class="video-wrapper">
             <video controls>
@@ -96,7 +100,9 @@
         <p>Die Zahl der Stunden ist eine Voraussetzung für ein gutes Einkommen, aber nicht allein. Im Gegenteil zeigt sich, dass auch bei mehr Stunden Frauen systematisch nicht die Einkommen erreichen wie Männer. Ein erheblicher Anteil der Frauen verdient trotz Vollzeitjob nur ein Einkommen knapp über der Armutsgrenze. Denn vielen Frauen arbeiten in schlecht bezahlten Jobs. Für viele Frauen ist es schwer, den Lebensunterhalt zu erwirtschaften und gleichzeitig Risiken abzusichern und fürs  Alter vorzusorgen.</p>
         <p>Bei Frauen zwischen 60 und 64 Jahren hat sich die Erwerbstätigenquote in den vergangenen Jahren verdoppelt: von 24,9 Prozent im Jahr 2007 auf <a href="https://www.destatis.de/Europa/DE/Thema/BevoelkerungSoziales/Arbeitsmarkt/ArbeitsmarktFrauen.html">53,3 Prozent im Jahr 2017.</a> Betrachtet man wie sich der Verdienst von Männern und Frauen im Verlauf des Lebens entwickelt wird deutlich: Bis 30 steigt der Verdienst bei beiden ähnlich an. Ab 30, also ungefähr dem Durchschnittsalter von Müttern bei der Geburt des ersten Kindes, unterscheiden sich die Verdienste zunehmend.</p>
         <iframe style="margin: 0 4%;" src="https://datawrapper.dwcdn.net/JxydY/5/" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="allowfullscreen" webkitallowfullscreen="webkitallowfullscreen" mozallowfullscreen="mozallowfullscreen" oallowfullscreen="oallowfullscreen" msallowfullscreen="msallowfullscreen" width="90%" height="500"></iframe>
-        <p><b><a href="https://www1.wdr.de/verbraucher/geld/bf-stundenlohn-100.html">Barrierefreie Tabelle</a></b></p>
+        <p class="bf-link">
+            <a href="https://www1.wdr.de/verbraucher/geld/bf-stundenlohn-100.html">Barrierefreie Tabelle</a>
+        </p>
         <p>Bei Männern steigt der Verdienst weiter. Dagegen bleibt der Verdienst bei Frauen ab etwa Mitte 30 auf demselben Niveau. Den größten Unterschied bei den Bruttostundenlöhne sieht man bei Männern und Frauen mit Ende 40. Hier bekamen Männer im Schnitt <a href="https://www.destatis.de/DE/Publikationen/Thematisch/VerdiensteArbeitskosten/Arbeitnehmerverdienste/BroschuereVerdiensteBlick0160013179004.pdf?__blob=publicationFile">38 Prozent mehr als die gleichaltrigen Frauen.</a></p>
         <p></p>
         {% include "partials/question.html" with { question: data[3] } %}
