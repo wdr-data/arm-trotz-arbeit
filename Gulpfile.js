@@ -134,27 +134,16 @@ gulp.task('images', function() {
         .pipe(gulp.dest(path.join(dist, 'images')));
 });
 
-gulp.task('videos', function() {
-    return gulp.src('videos/**/*')
-        .pipe($.imagemin([
-            imageminJpegoptim({ max: 70 }),
-            $.imagemin.optipng({optimizationLevel: 5}),
-            $.imagemin.svgo({plugins: [{removeViewBox: true}]})
-        ], {
-            verbose: true
-        }))
-        .pipe(gulp.dest(path.join(dist, 'videos')));
-});
-
 gulp.task('copy:dist', function() {
     return gulp.src([
         'bower_components/jquery/dist/jquery.min.js',
-        'bower_components/d3/d3.min.js'
+        'bower_components/d3/d3.min.js',
+        'videos/**/*',
     ], { base: './' })
         .pipe(gulp.dest(dist));
 });
 
-gulp.task('assets', ['images', 'videos', 'fonts', 'html', 'copy:dist']);
+gulp.task('assets', ['images', 'fonts', 'html', 'copy:dist']);
 
 gulp.task('critical-css', ['assets'], function() {
     return gulp.src(path.join(dist, 'index.html'))
@@ -168,7 +157,7 @@ gulp.task('critical-css', ['assets'], function() {
 
 gulp.task('build', ['assets', 'critical-css']);
 
-gulp.task('upload', ['build'], function() {
+gulp.task('upload', function() {
     const conn = ftp.create({
         host: process.env.FTP_HOST,
         user: process.env.FTP_USER,

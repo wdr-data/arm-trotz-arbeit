@@ -10,9 +10,9 @@
         <div id="hint-{{ question.key }}" class="accessibility" hidden aria-hidden="false">
             {{ question.accessibility | safe }}
         </div>
-        <div class="result {{ question.key }}">
+        <div class="result {{ question.key }}" aria-hidden="true">
             <div class="actionContainer">
-                <button class="showAction" disabled>Wie war's tatsächlich?</button>
+                <button class="showAction" disabled>Wie ist es tatsächlich?</button>
                 <div class="tooltipcontainer">
                     <span class="tooltiptext">Zeichnen Sie Ihre Einschätzung. Der Klick verrät, ob sie stimmt.</span>
                 </div>

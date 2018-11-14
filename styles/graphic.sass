@@ -26,22 +26,32 @@
       stop-color: $red
       stop-opacity: 0
 
+  .stripe-line
+    stroke-width: 7
+    stroke: $grey
+
   .axis
     opacity: .5
 
     text
       font-size: 15px
 
+  .charts
+    stroke-width: 0
 
-  .line
-    fill: none
-    stroke-width: 3
+  .graph
+    &-m
+      stroke: $color-m
+      &:not(.graph-user)
+        fill: $color-m
 
-    &.black
-      stroke: $black
+    &-f
+      stroke: $color-f
+      &:not(.graph-user)
+        fill: $color-f
 
-    &.red
-      stroke: $red
+    &-user
+      stroke-width: 3
 
   .dots
     circle
@@ -95,17 +105,17 @@
         border-width: 12px 6px
         margin-left: -6px
 
-      &.black
+      &.label-f
         span
-          background-color: $black
+          background-color: $color-f
         &:after
-          border-top-color: $black
+          border-top-color: $color-f
 
-      &.red
+      &.label-m
         span
-          background-color: $red
+          background-color: $color-m
         &:after
-          border-top-color: $red
+          border-top-color: $color-m
 
       &.your-result
         position: absolute
@@ -154,7 +164,7 @@
         opacity: 0.7
 
   .draggable
-    cursor: pointer
+    cursor: row-resize
 
   .your-line, .preview-line
     stroke-width: 4
@@ -178,6 +188,10 @@
 
   &:hover .preview-line
     opacity: 0
+
+.shown
+  .draggable
+    cursor: default
 
 #preview-arrow
   path
