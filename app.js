@@ -108,6 +108,16 @@
                 .append("line")
                 .attr("x1", 0).attr("y1", 0).attr("x2", 0).attr("y2", 10)
                 .classed("stripe-line", true)
+            c.defs.append("marker")
+                .attr("id", "preview-arrowp")
+                .attr("orient", "auto")
+                .attr("viewBox", "0 0 10 10")
+                .attr("markerWidth", 6)
+                .attr("markerHeight", 6)
+                .attr("refX", 1)
+                .attr("refY", 5)
+                .append("path")
+                .attr("d", "M 0 0 L 10 5 L 0 10 z");
 
             c.svg = base.append("g")
                 .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
@@ -123,7 +133,6 @@
                 .style("top", "0px");
             c.axis = c.svg.append("g");
             c.charts = c.svg.append("g").attr("class", "charts");
-            //c.xPredictionCenter = c.x(prediction) + (c.x.bandwidth() / 2);
 
             c.axis.append("g")
                 .attr("class", "x axis")
@@ -160,10 +169,40 @@
                 .classed(`graph-user graph-${target}`, true);
             const userLabel = c.labels.append("div")
                 .classed(`label-user label-${target}`, true)
+            let userValue = c.y(0) - 20;
             if (state[key].started) {
-                makeGraph(userGraph, c.x(labels[target]) * 0.9, c.y(state[key].value), c.x.bandwidth() / 4);
+                userValue = c.y(state[key].value);
                 makeLabel(userLabel, c.x(labels[target]) * 0.9, c.y(state[key].value), `Ihre Schätzung: ${formatValue(state[key].value)}`);
             }
+            makeGraph(userGraph, c.x(labels[target]) * 0.9, userValue, c.x.bandwidth() / 4);
+
+            // add a preview pointer
+            const xs = c.x(labels[target]) * 0.9 + (c.x.bandwidth() / 2);
+            const ys = userValue - 5;
+            const xArrowStart = xs + 45;
+            const yArrowStart = ys - 50;
+            const xTextStart = xArrowStart + 5;
+            const yTextStart = yArrowStart - 10;
+
+            c.preview = c.svg.append("path")
+                .attr("class", "controls preview-pointer")
+                .attr("marker-end", "url(#preview-arrowp)")
+                .attr("d", "M" + xArrowStart + "," + yArrowStart +
+                    " Q" + xs + "," + yArrowStart +
+                    " " + xs + "," + (ys - 10));
+
+            // add preview notice
+            c.controls = sel.append("div")
+                .attr("class", "controls")
+                .call(applyMargin)
+
+            c.controls.append("span")
+                .style("left", xTextStart + "px")
+                .style("top", yTextStart + "px")
+                .classed("preview-text", true)
+                .text("Ziehe den Balken!");
+
+
             const interactionHandler = function () {
                 if (state[key].resultShown) {
                     return;
