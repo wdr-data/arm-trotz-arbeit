@@ -10,14 +10,14 @@
         <div id="hint-{{ question.key }}" class="accessibility" hidden aria-hidden="false">
             {{ question.accessibility | safe }}
         </div>
-        <div class="result {{ question.key }}" aria-hidden="true">
-            <div class="actionContainer">
+        <div class="result {{ question.key }}">
+            <div class="actionContainer" aria-hidden="true">
                 <button class="showAction" disabled>Wie ist es tatsächlich?</button>
                 <div class="tooltipcontainer">
                     <span class="tooltiptext">Zeichnen Sie Ihre Einschätzung. Der Klick verrät, ob sie stimmt.</span>
                 </div>
             </div>
-            <div class="text">{{ question.result|md }}</div>
+            <div class="text" hidden aria-hidden="false">{{ question.result|md }}</div>
         </div>
         <script>
             window.ydi_data = window.ydi_data || {};

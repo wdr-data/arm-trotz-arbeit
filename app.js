@@ -242,7 +242,6 @@
                 }
                 state[key].resultShown = true;
                 sel.node().classList.add('shown');
-                resultSection.attr("aria-hidden", "false");
                 resultSection.node().classList.add('shown');
                 makeGraph(resultChart, c.x(labels[target]) * 1.1, c.y(data[target]), c.x.bandwidth() / 4);
                 makeLabel(resultLabel, c.x(labels[target]) * 1.1, c.y(data[target]), formatValue(data[target]));

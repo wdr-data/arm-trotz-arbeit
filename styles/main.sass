@@ -215,9 +215,12 @@ body
     .text
       max-width: $max-width * 0.5
       margin: 10px auto
-      visibility: hidden
       text-align: center
       font-size: 20px
+
+      &[hidden]
+        display: block
+        visibility: hidden
 
       p
         line-height: 1.5
