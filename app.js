@@ -64,7 +64,7 @@
             const makeLabel = function (sel, x, y, text) {
                 sel.classed("data-label", true)
                     .style("left", x + (c.x.bandwidth() / 2) + "px")
-                    .style("top", y + "px")
+                    .style("bottom", (c.height-y) + "px")
                     .html("")
                     .append("span")
                     .text(text);
@@ -172,7 +172,7 @@
             let userValue = c.y(0) - 20;
             if (state[key].started) {
                 userValue = c.y(state[key].value);
-                makeLabel(userLabel, c.x(labels[target]) * 0.9, c.y(state[key].value), `Ihre Schätzung: ${formatValue(state[key].value)}`);
+                makeLabel(userLabel, c.x(labels[target]) * 0.9, c.y(state[key].value), `Geschätzt:\n${formatValue(state[key].value)}`);
             }
             makeGraph(userGraph, c.x(labels[target]) * 0.9, userValue, c.x.bandwidth() / 4);
 
@@ -215,7 +215,7 @@
                 state[key].value = value;
 
                 makeGraph(userGraph, c.x(labels[target]) * 0.9, c.y(value), c.x.bandwidth() / 4);
-                makeLabel(userLabel, c.x(labels[target]) * 0.9, c.y(state[key].value), `Ihre Schätzung: ${formatValue(value)}`);
+                makeLabel(userLabel, c.x(labels[target]) * 0.9, c.y(state[key].value), `Geschätzt:\n${formatValue(value)}`);
 
                 if (!state[key].started) {
                     state[key].started = true;
