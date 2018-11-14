@@ -138,7 +138,6 @@ gulp.task('copy:dist', function() {
     return gulp.src([
         'bower_components/jquery/dist/jquery.min.js',
         'bower_components/d3/d3.min.js',
-        'videos/**/*',
     ], { base: './' })
         .pipe(gulp.dest(dist));
 });
