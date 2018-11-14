@@ -154,9 +154,12 @@ body
 
 .question
   h2, h3
-    max-width: $max-width * 0.8
-    margin: 10px auto
+    margin: 10px 50px
     /* text-align: center */
+
+  @media (max-width: 750px)
+    h2, h3
+      margin: 10px
 
   h2
     font-size: 24px
