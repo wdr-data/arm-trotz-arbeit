@@ -200,7 +200,7 @@
                 .style("left", xTextStart + "px")
                 .style("top", yTextStart + "px")
                 .classed("preview-text", true)
-                .text("Ziehe den Balken!");
+                .text("Ziehen Sie den Balken!");
 
 
             const interactionHandler = function () {
