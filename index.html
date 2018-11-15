@@ -19,6 +19,7 @@
     <link rel="shortcut icon" href="https://www1.wdr.de/resources/img/favicon.ico"/>
     <link rel="icon" href="https://www1.wdr.de/resources/img/favicon.ico"/>
 
+    <link rel="stylesheet" href="https://www.wdr.de/themen/global/flashplayer/KRV2/css/plainGSEA.min.css">
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -45,15 +46,13 @@
                 <br>Wir laden Sie ein, mal zu schätzen, wie die Situation für Frauen in Deutschland ist.
             </strong>
         </p>
-        <div class="video-wrapper">
-            <video controls>
-                <source src="videos/Intro.mp4" type="video/mp4">
-            </video>
-            <p>Im Video: Leerer Kühlschrank, Altersarmut und Krankheit: Susanne, Janina und Ulrike erzählen von ihren Ängsten.</p>
-        </div>
+        <p>Im Video: Leerer Kühlschrank, Altersarmut und Krankheit: Susanne, Janina und Ulrike erzählen von ihren Ängsten.</p>
     </div>
 
-    <div class="chapter_one">
+    {% include "partials/video.html" with { id: "1777826", image: "images/Intro.jpg" } %}
+    <p>Im Video: Leerer Kühlschrank, Altersarmut und Krankheit: Susanne, Janina und Ulrike erzählen von ihren Ängsten.</p>
+
+    <div class="chapter chapter_one">
             <h2>EINKOMMEN</h2>
             <p>Frauen in einer Partnerschaft tragen in Deutschland so wenig zum Haushaltseinkommen bei wie in kaum einem anderen der 36 OECD-Länder (Organisation für wirtschaftliche Zusammenarbeit und Entwicklung). Der durchschnittliche Anteil am Familieneinkommen beträgt in Deutschland 22,4 Prozent. In Dänemark sind es zum Beispiel 42 Prozent. <a href= "https://read.oecd-ilibrary.org/social-issues-migration-health/dare-to-share-germany-s-experience-promoting-equal-partnership-in-families_9789264259157-en#page23"> OECD-Schnitt sind 33 Prozent.</a></p>
         {% include "partials/question.html" with { question: data[0] } %}
@@ -63,42 +62,30 @@
             <a href="https://www1.wdr.de/verbraucher/geld/bf-einkommen-100.html">Barrierefreie Tabelle</a>
         </p>
         <p>Im reichen Land Deutschland ist der Anteil der Frauen bei schlecht bezahlten Jobs hoch und <a href="https://ourworldindata.org/six-facts-pay-gap"> bei gut bezahlten niedrig.</a> Zwei Drittel aller ausschließlichen Minijobber in Deutschland sind Frauen. Darüber hinaus haben mehr Frauen als Männer <a href="https://statistik.arbeitsagentur.de/Statischer-Content/Arbeitsmarktberichte/Personengruppen/generische-Publikationen/Frauen-Maenner-Arbeitsmarkt.pdf"> neben ihrem Hauptjob noch einen Minijob.</a></p>
-        <div class="video-wrapper">
-            <video controls>
-                <source src="./videos/Ulrike_Einkommen.mp4" type="video/mp4">
-            </video>
-            <p>Im Video: Ulrike ist studierte Opernsängerin, sie hat neun Jobs. Um Geld zu sparen, fährt sie am Tag bis zu 75km mit dem Fahrrad.</p>
-        </div>
+        {% include "partials/video.html" with { id: "1777845", image: "images/Ulrike.jpg" } %}
+        <p>Im Video: Ulrike ist studierte Opernsängerin, sie hat neun Jobs. Um Geld zu sparen, fährt sie am Tag bis zu 75km mit dem Fahrrad.</p>
         <p>Knapp 15 Prozent der 30- bis 50-Jährigen sind geschieden oder leben getrennt. 3 von 5 Frauen verdienen weniger als 1.500 Euro und jede fünfte sogar weniger als 1.000 Euro netto im Monat. Vor allem Frauen, die während der Ehe nicht oder nur geringfügig erwerbstätig waren, haben nach der Scheidung (ohne neuen Partner) große Probleme, ihren Lebensstandard zu halten oder ihre eigene Existenz zu finanzieren. Immerhin jede fünfte geschiedene Frau schafft es, durch ihre Arbeit mehr als 2.000 Euro netto zu verdienen. Voraussetzung dafür in den meisten Fällen: <a href="https://www.bmfsfj.de/blob/83858/928434dae7d841aadc5d2b0ef137573b/20160307-studie-mitten-im-leben-data.pdf"> Arbeiten gehen schon während der Ehe.</a></p>
     </div>
 
-    <div class="chapter_two">
+    <div class="chapter chapter_two">
             <h2>AUSBILDUNG</h2>
             <p>Woran liegt es, dass viele Frauen in Deutschland so wenig verdienen? 2017 arbeiteten in Deutschland 83 Prozent der Männer und knapp <a href="https://ec.europa.eu/eurostat/tgm/refreshTableAction.do?tab=table&plugin=1&pcode=t2020_10&language=de">75 Prozent der Frauen im Alter von 20-64 Jahren.</a> Damit liegt die Quote der arbeitenden Frauen gut <a href="https://www.oecd.org/germany/Gender2017-DEU-de.pdf"> 10 Prozentpunkte über dem Durchschnitt in der OECD.</a> Im Bereich Ausbildung haben sich in Deutschland die Unterschiede zwischen Frauen und Männern in den vergangen Jahrzehnten stark verringert:</p>
         {% include "partials/question.html" with { question: data[1] } %}
         <p>Unverändert groß sind jedoch die Unterschiede in der Studienfachwahl zwischen Frauen und Männern: 2009 entfielen zum Beispiel in Deutschland auf Frauen nur 16 Prozent der Uni-Abschlüsse in Informatik, dafür aber 70 Prozent im Gesundheits- und Sozialwesen. Die OECD hält dazu fest: “Diese Studienentscheidungen sind das Resultat unterschiedlicher Vorlieben und nicht geschlechtsspezifischer Begabungen.” Und sie bescheinigt Deutschland, dass “Bildung und Kompetenzen von Frauen auf dem deutschen Arbeitsmarkt <a href="https://www.oecd.org/germany/Gender2017-DEU-de.pdf">nicht voll ausgeschöpft werden.”</a></p>
-        <div class="video-wrapper">
-            <video controls>
-                <source src="./videos/Sandra_Ausbildung.mp4" type="video/mp4">
-            </video>
-            <p>Im Video: Sandra hat vier Kinder und einen Job, für den sie überqulifiziert ist. Sie findet es traurig, dass die Rollenverteilung in Deutschland oft noch so klassisch ist.</p>
-        </div>
+        {% include "partials/video.html" with { id: "1777848", image: "images/Sandra.jpg" } %}
+        <p>Im Video: Sandra hat vier Kinder und einen Job, für den sie überqulifiziert ist. Sie findet es traurig, dass die Rollenverteilung in Deutschland oft noch so klassisch ist.</p>
     </div>
 
-    <div class="chapter_three">
+    <div class="chapter chapter_three">
             <h2>TEILZEIT</h2>
             <p>2016 hatten 46 Prozent der Frauen einen Teilzeitjob und 11 Prozent der Männer. Auch wenn sich der Anteil der arbeitenden Frauen in den vergangenen zehn Jahren erhöht hat, beruht der Anstieg fast allein auf mehr Teilzeitbeschäftigung. Die Zahl der vollzeitbeschäftigten Frauen hat sich <a href="https://statistik.arbeitsagentur.de/Statischer-Content/Arbeitsmarktberichte/Personengruppen/generische-Publikationen/Frauen-Maenner-Arbeitsmarkt.pdf"> im Grunde nicht verändert.</a> Aber die Lücke zwischen den Teilzeitquoten beider Geschlechter hat sich deutlich vergrößert. Gleichzeitig wünschte sich 2015 in einer Umfrage des Familienministeriums jeder dritte Vater mehr Zeit mit den Kindern und die meisten <a href="https://read.oecd-ilibrary.org/social-issues-migration-health/dare-to-share-germany-s-experience-promoting-equal-partnership-in-families_9789264259157-en#page22"> Väter würden gerne weniger arbeiten.</a> Trotzdem sieht es derzeit nicht so aus, als würde sich an der Verteilung der Erwerbsarbeit zwischen Mann und Frau viel ändern:</p>
         {% include "partials/question.html" with { question: data[2] } %}
         <p>Eine bessere Aufteilung der Kinderbetreuung ist ein wichtiger Faktor, wenn es darum geht, Frauen zu ermöglichen, voll in den Arbeitsmarkt einzusteigen. Seit der Einführung des Elterngeldes nehmen Jahr für Jahr mehr Väter eine Auszeit für ihre Kinder. Bei Kindern, die 2015 geboren wurden, blieb jeder dritte Vater mindestens 2 Monate zu Hause. Insgesamt fehlt in Deutschland laut OECD vielerorts ein qualitativ hochwertiges und bezahlbares <a href="http://www.oecd.org/gender/ClosingTheGenderGap-Germany.pdf">Betreuungsangebot.</a></p>
-        <div class="video-wrapper">
-            <video controls>
-                <source src="./videos/Janina_Teilzeit.mp4" type="video/mp4">
-            </video>
-            <p>Im Video: Janina hat in den Niederlanden gelebt. Sie findet, dass arbeitende Mütter dort mehr Wertschätzung erfahren. Zudem gibt es einmal in der Woche einen Papa-Tag.</p>
-        </div>
+        {% include "partials/video.html" with { id: "1777850", image: "images/Janina.jpg" } %}
+        <p>Im Video: Janina hat in den Niederlanden gelebt. Sie findet, dass arbeitende Mütter dort mehr Wertschätzung erfahren. Zudem gibt es einmal in der Woche einen Papa-Tag.</p>
     </div>
 
-    <div class="chapter_four">
+    <div class="chapter chapter_four">
         <h2>ALTERSARMUT</h2>
         <p>Die Zahl der Stunden ist eine Voraussetzung für ein gutes Einkommen, aber nicht allein. Im Gegenteil zeigt sich, dass auch bei mehr Stunden Frauen systematisch nicht die Einkommen erreichen wie Männer. Ein erheblicher Anteil der Frauen verdient trotz Vollzeitjob nur ein Einkommen knapp über der Armutsgrenze. Denn vielen Frauen arbeiten in schlecht bezahlten Jobs. Für viele Frauen ist es schwer, den Lebensunterhalt zu erwirtschaften und gleichzeitig Risiken abzusichern und fürs  Alter vorzusorgen.</p>
         <p>Bei Frauen zwischen 60 und 64 Jahren hat sich die Erwerbstätigenquote in den vergangenen Jahren verdoppelt: von 24,9 Prozent im Jahr 2007 auf <a href="https://www.destatis.de/Europa/DE/Thema/BevoelkerungSoziales/Arbeitsmarkt/ArbeitsmarktFrauen.html">53,3 Prozent im Jahr 2017.</a> Ein Blick auf den Verdienst im Verlauf des Lebens zeigt: Bis 30 steigt der Bruttoverdienst pro Stunde bei Männern und Frauen ähnlich an. Ab 30 - dann wenn Frauen im Schnitt zum ersten Mal Mutter werden - gehen die Kurven auseinander:</p>
@@ -110,12 +97,8 @@
         <p></p>
         {% include "partials/question.html" with { question: data[3] } %}
         <p>Dieses Rentengefälle ist das Größte in der OECD: “Zwei Drittel der deutschen Rentner sind Frauen, und die Rentenlücke zwischen Männern und Frauen ist ein wesentlicher Grund dafür, dass 10 Prozent von ihnen <a href="http://www.oecd.org/gender/ClosingTheGenderGap-Germany.pdf">in Altersarmut leben.”</a></p>
-        <div class="video-wrapper">
-            <video controls>
-                <source src="./videos/Susanne_Altersarmut.mp4" type="video/mp4">
-            </video>
-            <p>Im Video: Susanne schätzt, dass ihre Rente im  Alter nicht reichen wird: "Das ist dann der Dank für 40 Jahre Arbeit."</p>
-        </div>
+        {% include "partials/video.html" with { id: "1777852", image: "images/Susanne.jpg" } %}
+        <p>Im Video: Susanne schätzt, dass ihre Rente im  Alter nicht reichen wird: "Das ist dann der Dank für 40 Jahre Arbeit."</p>
         <div class="final-link">
                 <br><strong><a href="https://www1.wdr.de/fernsehen/menschen-hautnah/sendungen/arm-trotz-arbeit-110.html">Den ganzen Film 'Menschen hautnah - Arm trotz Arbeit' in der Mediathek ansehen</a></strong>
         </div>
@@ -162,6 +145,8 @@
 {% include "partials/footer.html" %}
 
 <script src="bower_components/d3/d3.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="https://www.wdr.de/themen/global/flashplayer/KRV2/js/player/player.min.js?version=5.61.1-17850"></script>
 <!-- build:js app.js -->
 <script src="app.js"></script>
 <!-- endbuild -->

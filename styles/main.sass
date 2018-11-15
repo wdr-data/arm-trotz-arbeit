@@ -17,20 +17,16 @@ body
   background: #bababa
 
 #content
+  margin-top: 5px
   overflow: hidden
 
   &.container
     margin: 5px auto 0 auto
+    padding: 0 50px
     background: white
 
-  video
-    height: 400px
-    margin: 20px 0
-
-  @media (max-width: 750px)
-    video
-      height: 300px
-      margin: 10px 0
+    @media (max-width: 750px)
+      padding: 0 10px
 
 .category
   overflow: hidden
@@ -103,21 +99,8 @@ body
     img
       border-radius: 50%
 
-  video
-    margin: 50px 200px
-
-.chapter_one,
-.chapter_two,
-.chapter_three,
-.chapter_four
-  padding: 0 50px
-
-  @media (max-width: 750px)
-    .chapter_one,
-    .chapter_two,
-    .chapter_three,
-    .chapter_four
-      padding: 0 10px
+.chapter
+  margin-top: 100px
 
 .bf-link
   text-align: right
